@@ -9,6 +9,12 @@ if x == "yes":
         's':'p'
     }
 
+    emoji= {
+        "r": '🪨',
+        'p':'📃',
+        's':'✂️'
+    }
+
     y = input("input r for rock 'p' for paper and 's' for scissors   ").lower()
     z = random.choice(['r','s','p'])
 
@@ -17,7 +23,7 @@ if x == "yes":
     elif z == y:
         print("draw")
     elif wins[y] == z:
-        print(f'u win u chose {y}  and the computer chose {z}')
+        print(f'u win u chose {y} {emoji[y]}   and the computer chose {z} "{emoji[z]}')
     else:
-        print(f"u lose you chose {y} and the computer chose {z}")
+        print(f"u lose you chose {y}  {emoji[y]} and the computer chose {z} {emoji[z]}")
     
