@@ -1,16 +1,11 @@
 import random 
 def userInput():
                 return input("input r for rock 'p' for paper and 's' for scissors   ").lower()
+
 def whowon( y):   
-        wins = {
-                'r':'s',
-                'p':'r',
-                's':'p'}
-        emoji= {
-                "r": '🪨',
-                'p':'📃',
-                's':'✂️'
-            }
+        wins = {  'r':'s', 'p':'r', 's':'p'}
+        emoji= {  "r": '🪨',  'p':'📃','s':'✂️'}
+        
         z = random.choice(['r','s','p'])
 
         if y not in ['r','s','p']:
@@ -23,16 +18,14 @@ def whowon( y):
         else:
                     print(f"u lose you chose {y}  {emoji[y]} and the computer chose {z} {emoji[z]}")
 def main():
-    x=input("wanna play rock paper scissors\t").lower()
-    if x == "yes":
+    while True:
+        
         y=userInput()
         whowon(y)
 
+        wanna_play= input("wanna play more ?").lower()
 
-            
-    elif x =="no":
-            print("oky ")
-    else :
-            print("invalid input")
+        if wanna_play =="no":
+                break
 
 main()
